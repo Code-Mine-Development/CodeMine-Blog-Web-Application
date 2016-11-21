@@ -12,4 +12,5 @@ dependencies:
 
 test:
   override:
+    - ng lint
     - ng test --single-run
