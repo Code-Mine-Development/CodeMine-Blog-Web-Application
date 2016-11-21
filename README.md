@@ -1,6 +1,6 @@
 # Code Mine Portfolio
 
-Build: [![CircleCI](https://circleci.com/gh/Code-Mine-Development/CodeMine-Website-Web-Application/tree/master.svg?style=svg&circle-token=7e3419f46f5afafe893146e7d8da2da88971d441)](https://circleci.com/gh/Code-Mine-Development/CodeMine-Website-Web-Application/tree/master)
+[![CircleCI](https://circleci.com/gh/Code-Mine-Development/CodeMine-Website-Web-Application/tree/master.svg?style=svg&circle-token=7e3419f46f5afafe893146e7d8da2da88971d441)](https://circleci.com/gh/Code-Mine-Development/CodeMine-Website-Web-Application/tree/master) [![Dependency Status](https://www.versioneye.com/user/projects/583323084ef164004c242793/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/583323084ef164004c242793)
 
 ## Conventions
 
