@@ -8,3 +8,7 @@ dependencies:
     - rm -rf node_modules dist tmp
     - npm install --save-dev angular-cli@latest
     - npm install
+
+test:
+  override:
+    - ng test --single-run
