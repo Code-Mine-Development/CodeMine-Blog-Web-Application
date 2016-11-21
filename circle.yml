@@ -6,9 +6,10 @@ dependencies:
   override:
     - npm install npm@latest -g
     - rm -rf node_modules dist tmp
+    - npm install -g --save-dev angular-cli@latest
     - npm install --save-dev angular-cli@latest
     - npm install
 
 test:
   override:
-    - npm test --single-run
+    - ng test --single-run
