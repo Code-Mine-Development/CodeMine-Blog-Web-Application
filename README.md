@@ -1,6 +1,6 @@
 # Code Mine Portfolio
 
-
+[![CircleCI](https://circleci.com/gh/Code-Mine-Development/CodeMine-Website-Web-Application/tree/master.svg?style=svg&circle-token=7e3419f46f5afafe893146e7d8da2da88971d441)](https://circleci.com/gh/Code-Mine-Development/CodeMine-Website-Web-Application/tree/master) [![Dependency Status](https://www.versioneye.com/user/projects/583323084ef164004c242793/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/583323084ef164004c242793)
 
 ## Conventions
 
@@ -14,4 +14,23 @@ Each routing configuration should be specified in separate module that is dedica
 4. Each commit message needs to contain issue number from [Jira](http://jira.code-mine.com/secure/RapidBoard.jspa?rapidView=23) (CMW-X)
  
 5. For issues that are part of Story new feature branch must be created for entire story 
+
+
+
+## Testing
+
+For karma testing run 
+`$ ng test`
+
+Edge to Edge tests are conducted via 
+
+`$ ng e2e` 
+
+
+## Build
+
+To prepare package run:
+`$ ng build` 
+
+
 
