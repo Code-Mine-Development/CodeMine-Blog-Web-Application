@@ -1,7 +1,7 @@
 {
   "name": "code-mine-portfolio",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "proprietary",
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
