@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {WebsiteComponent} from './website.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   imports: [
@@ -11,7 +10,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     FormsModule,
     HttpModule
   ],
-  declarations: [WebsiteComponent, PortfolioComponent],
+  declarations: [WebsiteComponent],
   bootstrap: [WebsiteComponent]
 })
 export class WebsiteModule {
