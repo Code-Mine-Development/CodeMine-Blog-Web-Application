@@ -20,7 +20,7 @@ test:
 
 deployment:
   testing:
-    branch: branch: /^(?!master).*?$/
+    branch: /^(?!master).*?$/
     commands:
       - ng build
 
