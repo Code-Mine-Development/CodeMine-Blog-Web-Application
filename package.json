@@ -1,11 +1,11 @@
 {
-  "name": "Code Mine Website - Web Application",
+  "name": "CodeMineWebsite-WebApplication",
   "version": "0.0.0",
   "license": "GNU GPLv3",
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
-    "lint": "tslint \"src/**/*.ts\"",
+    "lint": "tslint \"src/**/*.ts\" --fix",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor"
