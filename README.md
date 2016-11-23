@@ -1,38 +1,31 @@
-# Code Mine Portfolio
+# MigrationProject
 
-[![CircleCI](https://circleci.com/gh/Code-Mine-Development/CodeMine-Website-Web-Application/tree/master.svg?style=svg&circle-token=7e3419f46f5afafe893146e7d8da2da88971d441)](https://circleci.com/gh/Code-Mine-Development/CodeMine-Website-Web-Application/tree/master) [![Dependency Status](https://www.versioneye.com/user/projects/583323084ef164004c242793/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/583323084ef164004c242793)
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.20-4.
 
-## Conventions and rules
+## Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-1. Routing for modules should be implemented with respect for specification outlined in Angular 2 Guidelines https://angular.io/docs/ts/latest/guide/router.html
-Each routing configuration should be specified in separate module that is dedicated to base module of given feature set. 
+## Code scaffolding
 
-2. Each component should define it's own styles
-
-3. Services and Pipes **must** have tests
-
-4. Each commit message **needs to** contain issue number from [Jira](http://jira.code-mine.com/secure/RapidBoard.jspa?rapidView=23) (CMW-X)
- 
-5. For issues that are part of Story new feature branch must be created for entire story 
-
-
-
-## Testing
-
-For karma testing run:
-
-`$ ng test`
-
-Edge to Edge tests are conducted via:
-
-`$ ng e2e` 
-
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
 
 ## Build
 
-To prepare package run:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-`$ ng build` 
+## Running unit tests
 
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Running end-to-end tests
 
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
+
+## Deploying to Github Pages
+
+Run `ng github-pages:deploy` to deploy to Github Pages.
+
+## Further help
+
+To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
