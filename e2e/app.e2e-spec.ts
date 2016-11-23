@@ -1,10 +1,10 @@
-import { CodeMinePortfolioPage } from './app.po';
+import { MigrationProjectPage } from './app.po';
 
-describe('code-mine-portfolio App', function() {
-  let page: CodeMinePortfolioPage;
+describe('migration-project App', function() {
+  let page: MigrationProjectPage;
 
   beforeEach(() => {
-    page = new CodeMinePortfolioPage();
+    page = new MigrationProjectPage();
   });
 
   it('should display message saying app works', () => {
