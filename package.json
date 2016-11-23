@@ -1,7 +1,7 @@
 {
   "name": "code-mine-portfolio",
   "version": "0.0.0",
-  "license": "proprietary",
+  "license": "GNU GPLv3",
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
