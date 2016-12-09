@@ -1,8 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
 
-/*
-Node Modules
- */
+/*Imports*/
+
 @import "../node_modules/reset-css/reset";
-/*
-*/
+@import "assets/mixins";
+@import "assets/colors";
+
+*{
+  @include roboto-regular;
+  letter-spacing: 1px;
+}
+/*Default styles for button*/
+
+button.ui.primary.basic.button{
+  @include roboto-bold;
+  height: 44px;
+  padding: 0 30px;
+  margin-right: 0;
+  border-radius: 0;
+  font-size: 17px;
+  color: $black!important;
+  box-shadow: 0 0 0 2px $yellow inset!important;
+  @include button-transition(0.2s);
+  &:hover{
+    background: $yellow!important;
+    box-shadow: 0 0 0 2px $yellow inset !important;
+    color: $black !important;
+  }
+  &:focus{
+    box-shadow: 0 0 0 2px $yellow inset !important;
+    color: $black !important;
+  }
+}
+
+/*Default styles for dropdown*/
+
+sm-dropdown.default{
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  border: 2px solid $black;
+  >div{
+    .text{
+      color: $black!important;
+      font-size: 18px;
+      @include roboto-bold;
+    }
+  }
+}

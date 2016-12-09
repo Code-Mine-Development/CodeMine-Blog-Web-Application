@@ -5,15 +5,13 @@
     </div>
     <div>
       <ul>
-        <li *ngFor="let nav of navigation" [routerLink]="['/portfolio']">
+        <li *ngFor="let nav of navigation" routerLink="/{{nav}}" routerLinkActive="active">
           {{nav}}
         </li>
       </ul>
-      <ul>
-        <li *ngFor="let lang of language">
-          {{lang}}
-        </li>
-      </ul>
+      <sm-dropdown title="pl" class="pointing">
+        <sm-item *ngFor="let lang of language" (click)="lang">{{lang}}</sm-item>
+      </sm-dropdown>
     </div>
   </div>
   <router-outlet></router-outlet>

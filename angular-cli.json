@@ -18,9 +18,13 @@
       "prefix": "cmp",
       "mobile": false,
       "styles": [
+        "assets/Semantic/semantic.min.css",
         "styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "assets/Semantic/semantic.min.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
