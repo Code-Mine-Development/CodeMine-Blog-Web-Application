@@ -40,13 +40,50 @@ sm-dropdown.default{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 15px;
   border: 2px solid $black;
+  padding: 0!important;
   >div{
+    padding: 0 20px;
     .text{
       color: $black!important;
       font-size: 18px;
       @include roboto-bold;
+    }
+    i{
+      font: normal normal normal 14px/1 FontAwesome!important;
+      margin-left: 5px!important;
+      &:before{
+        display: none;
+      }
+      &:after{
+        content: "\f078";
+      }
+    }
+    .menu{
+      box-shadow: none!important;
+      border: 2px solid black!important;
+      border-radius: 0!important;
+      margin-top: 11px !important;
+      margin-left: -2px!important;
+      //position: absolute;
+      left: 0;
+      right: 0;
+      width: calc(100% + 4px);
+      .item{
+        @include roboto-bold;
+        background: white;
+        margin-top: -2px;
+        padding-left: 10px!important;
+        &:hover{
+          background: white!important;
+        }
+      }
+      .item.active{
+        background: white!important;
+      }
+      &:after{
+        display: none!important;
+      }
     }
   }
 }
