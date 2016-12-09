@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'cmp-portfolio',
-  templateUrl: 'portfolio.component.html',
-  styleUrls: ['portfolio.component.scss']
+  templateUrl: 'dashboard.component.html',
+  styleUrls: ['dashboard.component.scss']
 })
-export class PortfolioComponent implements OnInit {
+export class DashboardComponent implements OnInit {
 
   constructor() { }
 

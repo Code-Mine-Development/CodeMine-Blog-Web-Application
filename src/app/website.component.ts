@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WebsiteComponent implements OnInit {
 
+  navigation = [
+    'o nas',
+    'oferta',
+    'realizacje',
+    'open source',
+    'praca',
+    'kontakt',
+    'portfolio'
+  ];
+  language = [
+    'pl',
+    'en'
+  ];
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

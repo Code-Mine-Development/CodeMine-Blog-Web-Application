@@ -1,3 +1,20 @@
-<p>
-  website works!
-</p>
+<section>
+  <div class="header">
+    <div routerLink="/">
+      <img src="../assets/img/logo.png" alt="">
+    </div>
+    <div>
+      <ul>
+        <li *ngFor="let nav of navigation" [routerLink]="['/portfolio']">
+          {{nav}}
+        </li>
+      </ul>
+      <ul>
+        <li *ngFor="let lang of language">
+          {{lang}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</section>

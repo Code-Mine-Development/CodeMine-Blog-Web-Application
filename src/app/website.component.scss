@@ -1,0 +1,20 @@
+section{
+  margin: 13px 55px 0 55px;
+  >div.header{
+    display: flex;
+    justify-content: space-between;
+    >div:first-of-type{
+      img{
+        width: 115px;
+        height: 153px;
+      }
+    }
+    >div:last-of-type{
+      display: flex;
+      padding-top: 37px;
+      ul{
+        display: flex;
+      }
+    }
+  }
+}
