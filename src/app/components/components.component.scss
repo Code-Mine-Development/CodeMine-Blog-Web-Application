@@ -1,9 +1,18 @@
 section{
-  margin-top: 50px;
+  margin-top: 650px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   button{
     margin-bottom: 30px;
+  }
+  input{
+    margin-bottom: 30px;
+  }
+  .typography{
+    margin-top: 50px;
+    h2{
+      margin-bottom: 20px;
+    }
   }
 }

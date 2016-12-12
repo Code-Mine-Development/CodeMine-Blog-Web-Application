@@ -1,17 +1,35 @@
 <section>
-  <div class="header">
+  <div class="header" [ngClass]="{'animation':headerAnim == true, 'borderAnim':borderAnim == true}">
     <div routerLink="/">
-      <img src="../assets/img/logo.png" alt="">
+      <div class="wrapper">
+        <img src="../assets/img/logo.png" alt="" [ngStyle]="{'opacity':opacity}">
+        <div class="triangle-svg" [ngStyle]="{'transform':move}">
+          <svg viewBox="0 0 21.89 25.89">
+            <defs>
+              <style>.cls-1{fill:#ffdf00;}</style>
+            </defs>
+            <g id="layerOne" data-name="layer one">
+              <line class="cls-1" x1="4.63" y1="14.01" x2="4.63" y2="14.01"/><polygon class="cls-1" points="0.05 10.86 0.05 25.86 16.87 25.86 0.05 9.86"/>
+            </g>
+            <!--<g id="Warstwa_2" data-name="Warstwa 2">-->
+              <!--<line class="cls-1" x1="17.3" y1="22.73" x2="17.3" y2="22.73"/>       <polygon class="cls-1" points="16.89 25.89 16.89 9.88 0.05 9.88 21.89 30.89"/>-->
+            <!--</g>-->
+            <!--<g id="Warstwa_3" data-name="Warstwa 3">-->
+              <!--<line class="cls-1" x1="17.28" y1="10.94" x2="17.28" y2="10.94"/>     <polygon class="cls-1" points="16.88 9.94 8.94 0 0 9.94 16.88 10.94"/>-->
+            <!--</g>-->
+          </svg>
+        </div>
+      </div>
     </div>
     <div>
       <ul>
-        <li *ngFor="let nav of navigation" routerLink="/{{nav}}" routerLinkActive="active">
-          {{nav}}
+        <li *ngFor="let nav of navigation" routerLinkActive="active">
+          <span routerLink="/{{nav}}">{{nav}}</span>
+        </li>
+        <li class="lang">
+          <span (click)="changeLang()">{{switchLang}}</span>
         </li>
       </ul>
-      <sm-dropdown title="pl" class="pointing">
-        <sm-item *ngFor="let lang of language" (click)="lang">{{lang}}</sm-item>
-      </sm-dropdown>
     </div>
   </div>
   <router-outlet></router-outlet>
