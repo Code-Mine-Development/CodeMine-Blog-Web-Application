@@ -148,6 +148,22 @@ sm-dropdown.primary{
     }
   }
 }
+sm-dropdown.lang-switch{
+  padding: 10px 0 10px 60px;
+  *{
+    @include roboto-bold;
+  }
+  >div{
+    .menu{
+      box-shadow: none!important;
+      border-radius: 0!important;
+      border-color: $black!important;
+      &:after{
+        display: none!important;
+      }
+    }
+  }
+}
 
 /*Default styles for inputs*/
 .input.primary{

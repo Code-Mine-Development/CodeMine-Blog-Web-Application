@@ -50,7 +50,7 @@ section{
           cursor: pointer;
           position: absolute;
           width: 43px;
-          bottom: 2px;
+          bottom: 0;
           right: -9px;
         }
       }
@@ -94,14 +94,6 @@ section{
           span{
             &:before{
               width: 100%;
-            }
-          }
-        }
-        li.lang{
-          span{
-            padding: 10px 0 10px 60px;
-            &:before{
-              display: none;
             }
           }
         }

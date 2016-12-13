@@ -27,7 +27,10 @@
           <span routerLink="/{{nav}}">{{nav}}</span>
         </li>
         <li class="lang">
-          <span (click)="changeLang()">{{switchLang}}</span>
+          <sm-dropdown title="PL" class="pointing lang-switch">
+            <sm-item>EN</sm-item>
+            <sm-item>NO</sm-item>
+          </sm-dropdown>
         </li>
       </ul>
     </div>

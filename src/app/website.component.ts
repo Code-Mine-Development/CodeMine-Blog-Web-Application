@@ -96,6 +96,9 @@ export class WebsiteComponent implements OnInit {
     if(this.translateY < -117){
       this.translateY = -117;
     }
+    if(this.scrollTop < 1){
+      this.homeLeft = '0.05 10.86 0.05 25.86 16.87 25.86 0.05 9.86';
+    }
   }
   headerAnimation(){
     if(this.scrollTop > 285){
