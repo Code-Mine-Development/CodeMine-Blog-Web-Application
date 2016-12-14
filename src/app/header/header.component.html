@@ -22,8 +22,8 @@
   </div>
   <div>
     <ul>
-      <li *ngFor="let nav of navigation" routerLinkActive="active">
-        <span [routerLink]="'/'+ nav">{{nav}}</span>
+      <li *ngFor="let nav of navigation | async" routerLinkActive="active">
+        <span [routerLink]="'/'+ nav.routingName">{{nav.name}}</span>
       </li>
       <li class="lang">
         <sm-dropdown title="PL" class="pointing lang-switch">

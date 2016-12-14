@@ -1,6 +1,9 @@
+import { Observable } from 'rxjs';
 import {Component, OnInit, Inject, HostListener} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
-import {Router, NavigationEnd} from '@angular/router';
+import {Router, NavigationEnd, } from '@angular/router';
+
+import { Header, HeaderService }  from './header.service';
 
 @Component({
   selector: 'cmp-header',
@@ -8,18 +11,8 @@ import {Router, NavigationEnd} from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  navigation: Observable<Header[]>;
 
-  navigation = [
-    'components',
-    'o nas',
-    'oferta',
-    'realizacje',
-    'open source',
-    'praca',
-    'kontakt',
-    'portfolio'
-  ];
-  switchLang: string = 'en';
   scrollTop: number;
   opacity: number;
 
@@ -47,10 +40,22 @@ export class HeaderComponent implements OnInit {
   readyRightWall: boolean = false;
   readyLeftWall: boolean = false;
 
-  constructor(@Inject(DOCUMENT) private document: Document, private router: Router) {
-  }
+  constructor(@Inject(DOCUMENT)
+              private document: Document,
+              private router: Router,
+              private service: HeaderService
+              ) {}
 
   ngOnInit() {
+    this.navigation = Observable.fromPromise(this.service.getHeader());
+    this.navigation.subscribe(
+      (value)=>{
+        console.log(value);
+      },(error)=>{
+        console.log(error);
+      }
+    );
+
     this.prepareHomeWall();
 
     this.router.events.subscribe((evt) => {

@@ -2,9 +2,9 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule}    from '@angular/forms';
 import {NgSemanticModule} from 'ng-semantic';
-import {HeaderComponent} from './header.component';
+import {FooterComponent} from './footer.component';
 import {RouterModule} from '@angular/router';
-import {HeaderService} from './header.service';
+import {FooterService} from './footer.service';
 
 @NgModule({
   imports: [
@@ -14,10 +14,10 @@ import {HeaderService} from './header.service';
     RouterModule,
   ],
   declarations: [
-    HeaderComponent,
+    FooterComponent,
   ],
-  exports: [HeaderComponent],
-  providers: [HeaderService]
+  exports: [FooterComponent],
+  providers: [FooterService]
 })
-export class HeaderModule {
+export class FooterModule {
 }

@@ -1,6 +1,12 @@
 @import "../../assets/colors";
 @import "../../assets/mixins";
 
+:host{
+  position: fixed;
+  width: calc(100% - 100px);
+  top: 0;
+  z-index: 99999999999;
+}
 div.header.animation{
   height: 100px;
   @include custom-transition(0.2s);
@@ -15,11 +21,7 @@ div.header{
   @include custom-transition(0.2s);
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  width: calc(100% - 100px);
   background: white;
-  z-index: 99999999999;
-  top: 0;
   padding-top: 30px;
   height: 168px;
   &:before{
@@ -76,7 +78,7 @@ div.header{
             height: 2px;
             width: 0;
             position: absolute;
-            background: black;
+            background: $black;
             bottom: 12px;
             @include menu-line-transition;
           }

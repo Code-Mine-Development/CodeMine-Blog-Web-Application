@@ -11,10 +11,11 @@ import {DashboardModule} from './dashboard/dashboard.module';
 import {PortfolioModule} from './portfolio/portfolio.module';
 import {ComponentsModule} from './components/components.module'; // TODO:remove folder 'components'
 import {HeaderModule} from './header/header.module';
+import {FooterModule} from "./footer/footer.module";
 
 @NgModule({
   declarations: [
-    WebsiteComponent
+    WebsiteComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +25,8 @@ import {HeaderModule} from './header/header.module';
     PortfolioModule,
     ComponentsModule, // TODO:remove later
     HeaderModule,
-    WebsiteRoutingModule
+    WebsiteRoutingModule,
+    FooterModule
   ],
   bootstrap: [WebsiteComponent]
 })

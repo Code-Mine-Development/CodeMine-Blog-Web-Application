@@ -1,0 +1,16 @@
+<section>
+  <div>
+    <ul>
+      <li *ngFor="let nav of navigation | async" routerLinkActive="active">
+        <span [routerLink]="'/'+ nav.routingName">{{nav.name}}</span>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <li *ngFor="let social of socials | async" routerLinkActive="active">
+        <span>{{social.name}}</span>
+      </li>
+    </ul>
+  </div>
+</section>
