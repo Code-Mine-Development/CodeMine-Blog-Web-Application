@@ -1,21 +1,21 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule}    from '@angular/forms';
-
 import {NgSemanticModule} from 'ng-semantic';
-
-import {ComponentsComponent} from './components.component';
-import {ComponentsRoutingModule} from './components-routing.module';
+import {HeaderComponent} from './header.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     NgSemanticModule,
-    ComponentsRoutingModule
+    RouterModule,
   ],
-  declarations: [ComponentsComponent],
-  exports: [ComponentsComponent]
+  declarations: [
+    HeaderComponent,
+  ],
+  exports: [HeaderComponent]
 })
-export class ComponentsModule {
+export class HeaderModule {
 }

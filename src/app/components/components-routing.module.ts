@@ -1,6 +1,6 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ComponentsComponent } from "./components.component";
+import { ComponentsComponent } from './components.component';
 
 
 const componentsRoutes: Routes = [
@@ -9,7 +9,7 @@ const componentsRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forChild(componentsRoutes)
+    RouterModule.forRoot(componentsRoutes)
   ],
   exports: [
     RouterModule

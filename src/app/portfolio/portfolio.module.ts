@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule }    from '@angular/forms';
-import { PortfolioComponent } from './portfolio.component';
-import { PortfolioRoutingModule} from "./portfolio-routing.module";
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule}    from '@angular/forms';
+import {PortfolioComponent} from './portfolio.component';
+import {PortfolioRoutingModule} from './portfolio-routing.module';
 
 @NgModule({
   imports: [
@@ -12,4 +12,5 @@ import { PortfolioRoutingModule} from "./portfolio-routing.module";
   ],
   declarations: [PortfolioComponent]
 })
-export class PortfolioModule { }
+export class PortfolioModule {
+}
