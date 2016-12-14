@@ -1,1 +1,230 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*Imports*/
+
+@import "../node_modules/reset-css/reset";
+@import "assets/mixins";
+@import "assets/colors";
+*{
+  @include roboto-regular;
+  letter-spacing: 1px;
+  ::selection {
+    background: $yellow;
+  }
+  ::-moz-selection {
+    background: $yellow;
+  }
+}
+/*Typography*/
+h2.b-regular-24{
+  @include bitter-regular;
+  font-size: 24pt;
+}
+h2.b-regular-48{
+  @include bitter-regular;
+  font-size: 48pt;
+}
+h2.r-bold-36{
+  @include roboto-bold;
+  font-size: 36pt;
+}
+h2.r-regular-16{
+  @include roboto-regular;
+  font-size: 16pt;
+}
+p{
+  font-size: 14pt;
+  @include roboto-bold;
+  color: $text-color;
+}
+
+/*Default styles for button*/
+
+button.ui.primary.basic.button{
+  @include roboto-bold;
+  height: 44px;
+  padding: 0 30px;
+  margin-right: 0;
+  border-radius: 0;
+  font-size: 17px;
+  color: $black!important;
+  box-shadow: 0 0 0 2px $yellow inset!important;
+  @include button-transition;
+  &:hover{
+    background: $yellow!important;
+    box-shadow: 0 0 0 2px $yellow inset !important;
+    color: $black !important;
+  }
+  &:focus{
+    box-shadow: 0 0 0 2px $yellow inset !important;
+    color: $black !important;
+  }
+}
+
+/*Default styles for dropdown*/
+
+sm-dropdown.primary{
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $black;
+  padding: 0!important;
+  >div{
+    padding: 0px 17px;
+    .text{
+      color: $black!important;
+      font-size: 18px;
+      @include roboto-bold;
+      z-index: 99999;
+      position: relative;
+    }
+    i{
+      font-family: FontAwesome!important;
+      font-size: 17px;
+      margin-left: 5px!important;
+      &:before{
+        display: none;
+      }
+      &:after{
+        content: "\f078";
+      }
+    }
+    .menu.transition{
+      box-shadow: none!important;
+      border: 2px solid black!important;
+      border-radius: 0!important;
+      margin-top: 10px !important;
+      margin-left: -2px!important;
+      left: 0;
+      right: 0;
+      width: calc(100% + 4px);
+      &:before{
+        content: ''!important;
+        height: 1px;
+        width: 86%;
+        background: black;
+        position: absolute;
+        z-index: 9999;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .item:first-of-type{
+        &:before{
+          content: '';
+          position: absolute;
+          width: calc(100% + 4px);
+          height: 44px;
+          left: -2px;
+          top: -42px;
+          border: 2px solid;
+          border-bottom: none;
+          background: white;
+        }
+        &:after{
+          content: "\f077";
+          position: absolute;
+          font-family: FontAwesome;
+          right: 10px;
+          top: -25px;
+          font-size: 13px;
+        }
+      }
+      .item{
+        @include roboto-bold;
+        background: white;
+        margin-top: -2px;
+        padding-left: 16px !important;
+        &:hover{
+          background: white!important;
+        }
+      }
+      .item.active{
+        background: white!important;
+      }
+      &:after{
+        display: none!important;
+      }
+    }
+  }
+}
+sm-dropdown.lang-switch{
+  padding: 10px 0 10px 60px;
+  *{
+    @include roboto-bold;
+  }
+  >div{
+    .menu{
+      box-shadow: none!important;
+      border-radius: 0!important;
+      border-color: $black!important;
+      &:after{
+        display: none!important;
+      }
+    }
+  }
+}
+
+/*Default styles for inputs*/
+.input.primary{
+  overflow: hidden;
+  input{
+    outline: none;
+    height: 29px;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 0 15px;
+    color: $input-gray!important;
+    font-size: 18px;
+    @include roboto-bold;
+  }
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: $input-gray!important;
+    font-size: 18px;
+    @include roboto-bold;
+    @include placeholder-transition;
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $input-gray!important;
+    font-size: 18px;
+    @include roboto-bold;
+    @include placeholder-transition;
+  }
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    color: $input-gray!important;
+    font-size: 18px;
+    @include roboto-bold;
+    @include placeholder-transition;
+  }
+  input:-moz-placeholder {
+    /* Firefox 18- */
+    color: $input-gray!important;
+    font-size: 18px;
+    @include roboto-bold;
+    @include placeholder-transition;
+  }
+  input:focus:-moz-placeholder {
+    /* Firefox 18- */
+    transform: translateX(200%);
+    @include placeholder-transition;
+  }
+  input:focus::-moz-placeholder {
+    /* Firefox 19+ */
+    transform: translateX(200%);
+    @include placeholder-transition;
+  }
+  input:focus:-ms-input-placeholder {
+    transform: translateX(200%);
+    @include placeholder-transition;
+  }
+  input:focus::-webkit-input-placeholder {
+    transform: translateX(200%);
+    @include placeholder-transition;
+  }
+
+}
