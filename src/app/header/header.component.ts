@@ -3,7 +3,7 @@ import {Component, OnInit, Inject, HostListener} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
 import {Router, NavigationEnd, } from '@angular/router';
 
-import { Header, HeaderService }  from './header.service';
+import { Menu, HeaderService }  from './header.service';
 
 @Component({
   selector: 'cmp-header',
@@ -11,7 +11,7 @@ import { Header, HeaderService }  from './header.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  navigation: Observable<Header[]>;
+  navigation: Observable<Menu[]>;
 
   scrollTop: number;
   opacity: number;
@@ -43,21 +43,16 @@ export class HeaderComponent implements OnInit {
   constructor(@Inject(DOCUMENT)
               private document: Document,
               private router: Router,
-              private service: HeaderService
+              private serviceMenu: HeaderService
               ) {}
 
   ngOnInit() {
-    this.navigation = Observable.fromPromise(this.service.getHeader());
-    this.navigation.subscribe(
-      (value)=>{
-        console.log(value);
-      },(error)=>{
-        console.log(error);
-      }
-    );
-
+    this.prepareMenu();
     this.prepareHomeWall();
+    this.routerChangeScrollTop();
+  }
 
+  routerChangeScrollTop(){
     this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
         return;
@@ -65,6 +60,18 @@ export class HeaderComponent implements OnInit {
       document.body.scrollTop = 0;
     });
   }
+
+  prepareMenu(){
+    this.navigation = Observable.fromPromise(this.serviceMenu.getHeader());
+    this.navigation.subscribe(
+      (value)=>{
+        console.log(value);
+      },(error)=>{
+        console.log(error);
+      }
+    );
+  }
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.scrollTop = this.document.body.scrollTop;

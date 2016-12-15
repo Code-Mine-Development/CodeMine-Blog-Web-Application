@@ -1,15 +1,17 @@
 <section>
   <div>
     <ul>
-      <li *ngFor="let nav of navigation | async" routerLinkActive="active">
+      <li *ngFor="let nav of navigation | async">
         <span [routerLink]="'/'+ nav.routingName">{{nav.name}}</span>
       </li>
     </ul>
   </div>
   <div>
     <ul>
-      <li *ngFor="let social of socials | async" routerLinkActive="active">
-        <span>{{social.name}}</span>
+      <li *ngFor="let social of socials | async">
+        <a href="{{social.urlPath}}" target="_blank">
+          <span>{{social.name}}</span>
+        </a>
       </li>
     </ul>
   </div>

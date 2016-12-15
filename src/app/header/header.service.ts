@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
 
-export class Header {
+export class Menu {
   constructor(public name: string, public routingName: string) { }
 }
 
-let HEADER = [
-  new Header('components', 'components'),
-  new Header('o nas', 'about_us'),
-  new Header('oferta', 'offer'),
-  new Header('realizacje', 'realizations'),
-  new Header('open source', 'open_source'),
-  new Header('kontakt', 'contact'),
-  new Header('portfolio', 'portfolio')
+let MENU = [
+  new Menu('components', 'components'),
+  new Menu('o nas', 'about_us'),
+  new Menu('oferta', 'offer'),
+  new Menu('realizacje', 'realizations'),
+  new Menu('portfolio', 'portfolio'),
+  new Menu('blog', 'blog'),
+  new Menu('kontakt', 'contact')
 ];
 
-let headerPromise = Promise.resolve(HEADER);
+let headerPromise = Promise.resolve(MENU);
 
 @Injectable()
 export class HeaderService {

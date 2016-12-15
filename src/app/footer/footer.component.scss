@@ -2,17 +2,13 @@
 @import "../../assets/mixins";
 
 :host{
-  position: absolute;
-  bottom: 0;
   background: $black;
-  left: 0;
-  width: calc(100% + 110px);
+  width: 100%;
   height: 300px;
   color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -55px;
 }
 section{
   width: 100%;
@@ -65,19 +61,22 @@ section{
   div:last-of-type{
     ul{
       li{
-        text-transform: lowercase;
-        position: relative;
-        padding: 10px 60px 10px 30px;
-        &:before{
-          content: '';
-          position: absolute;
-          height: 100%;
-          width: 3px;
-          background: white;
-          transform-origin: bottom;
-          transform: rotate(45deg);
-          bottom: 3px;
-          right: 30px;
+        a{
+          text-transform: lowercase;
+          position: relative;
+          padding: 10px 60px 10px 30px;
+          color: $white;
+          &:before{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 3px;
+            background: white;
+            transform-origin: bottom;
+            transform: rotate(45deg);
+            bottom: 3px;
+            right: 30px;
+          }
         }
       }
     }

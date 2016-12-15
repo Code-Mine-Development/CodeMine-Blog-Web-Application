@@ -28,6 +28,10 @@ h2.r-bold-36{
   @include roboto-bold;
   font-size: 36pt;
 }
+h2.r-regular-36{
+  @include roboto-regular;
+  font-size: 36pt;
+}
 h2.r-regular-16{
   @include roboto-regular;
   font-size: 16pt;

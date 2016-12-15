@@ -3,7 +3,7 @@
 
 :host{
   position: fixed;
-  width: calc(100% - 100px);
+  width: 100%;
   top: 0;
   z-index: 99999999999;
 }
@@ -13,7 +13,7 @@ div.header.animation{
 }
 div.header.animation.borderAnim{
   &:before{
-    width: 100%;
+    width: calc(100% - 110px);
     @include custom-transition(0.3s);
   }
 }
@@ -22,8 +22,8 @@ div.header{
   display: flex;
   justify-content: space-between;
   background: white;
-  padding-top: 30px;
-  height: 168px;
+  padding: 30px 55px 0 55px;
+  height: 185px;
   &:before{
     content: '';
     height: 2px;

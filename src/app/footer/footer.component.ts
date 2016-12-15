@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Header, HeaderService }  from '../header/header.service';
+import { Menu, HeaderService }  from '../header/header.service';
 import { Social, FooterService }  from './footer.service';
-import {error} from "util";
+
 
 @Component({
   selector: 'cmp-footer',
@@ -11,15 +11,20 @@ import {error} from "util";
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  navigation: Observable<Header[]>;
+  navigation: Observable<Menu[]>;
   socials: Observable<Social[]>;
 
   constructor(
-    private headerService: HeaderService,
-    private footerService: FooterService) { }
+    private serviceMenu: HeaderService,
+    private serviceSocials: FooterService) {}
 
   ngOnInit() {
-    this.navigation = Observable.fromPromise(this.headerService.getHeader());
+    this.prepareMenu();
+    this.prepareSocials();
+  }
+
+  prepareMenu(){
+    this.navigation = Observable.fromPromise(this.serviceMenu.getHeader());
     this.navigation.subscribe(
       (value)=>{
         console.log(value);
@@ -27,8 +32,10 @@ export class FooterComponent implements OnInit {
         console.log(error);
       }
     );
+  }
 
-    this.socials = Observable.fromPromise(this.footerService.getSocials());
+  prepareSocials(){
+    this.socials = Observable.fromPromise(this.serviceSocials.getSocials());
     this.socials.subscribe(
       (value)=>{
         console.log(value);
@@ -36,7 +43,6 @@ export class FooterComponent implements OnInit {
         console.log(error);
       }
     );
-
   }
 
 }

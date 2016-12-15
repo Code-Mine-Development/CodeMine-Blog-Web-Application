@@ -1,0 +1,21 @@
+<section>
+  <div>
+    <ul>
+      <li *ngFor="let img of images | async">
+        <div class="content">
+          <div class="description">
+            <div class="title">
+              <h2 class="r-bold-36">{{img.title}}</h2>
+              <h2 class="r-bold-36">{{img.subTitle}}</h2>
+            </div>
+            <button class="ui primary basic button">READ</button>
+          </div>
+          <div class="arrow-left"></div>
+          <div class="arrow-right"></div>
+        </div>
+        <div class="background" [ngStyle]="{'background-image': 'url(' + img.imgUrl + ')'}"></div>
+      </li>
+    </ul>
+  </div>
+</section>
+

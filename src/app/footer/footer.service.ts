@@ -5,11 +5,11 @@ export class Social {
 }
 
 let SOCIAL = [
-  new Social('fb', 'fb'),
-  new Social('twitter', 'twitter'),
-  new Social('in', 'in'),
-  new Social('g+', 'g+'),
-  new Social('insta', 'insta')
+  new Social('fb', 'https://www.facebook.com/codeminedevelopment/'),
+  new Social('twitter', 'https://twitter.com/codeminedev'),
+  new Social('in', 'https://www.linkedin.com/company/code-mine'),
+  new Social('g+', ''),
+  new Social('insta', '')
 ];
 
 let socialPromise = Promise.resolve(SOCIAL);
